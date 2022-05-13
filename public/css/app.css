@@ -9,9 +9,10 @@ main {
 }
 main div.train-card {
   width: 33%;
-  height: 15rem;
   text-align: center;
   padding: 2rem;
+  border: 5px solid white;
+  background-color: darkseagreen;
 }
 main div.train-card p {
   margin: 0.7rem 0;
