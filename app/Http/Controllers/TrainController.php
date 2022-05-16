@@ -15,6 +15,15 @@ class TrainController extends Controller
         return view('trains.index', ["trains" => $trains]);
     }
 
+
+    public function show($id){
+        // $date = "2022-05-13";
+        // $trains = Train::whereDate("departure_date", ">=" , $date)
+        // ->get();
+
+        return view('trains.show');
+    }
+
     public function createNewTrain($agency, $departure_station, $arrival_station, $departrure_date, $departure_time, $arrival_date,
     $arrival_time, $train_code, $carriages_number, $is_in_time, $is_deleted){
         $newTrain = new Train();

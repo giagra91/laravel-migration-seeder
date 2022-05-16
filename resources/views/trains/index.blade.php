@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', "- trains")
+@section('title', "Trains list")
     
 
 @section('main-content')
@@ -12,9 +12,9 @@
             <p>Train infos:</p>
             <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
             <p>Departure infos:</p>
-            <p>Date and time: {{ $train->departure_date }} - {{ $train->departure_time }}</p>
-            <p>Arrival infos:</p>
-            <p>Date and time: {{ $train->arrival_date }} - {{ $train->arrival_time }}</p>
+            <p>Date: {{ $train->departure_date }}</p>
+            <p>Departure adn arrival time:</p>
+            <p>Date and time: {{ $train->departure_time }} - {{ $train->arrival_time }}</p>
             <div class="check-infos">
                 <p>
                     In time: 
