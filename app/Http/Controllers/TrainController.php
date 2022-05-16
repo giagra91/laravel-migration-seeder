@@ -11,7 +11,7 @@ class TrainController extends Controller
         $date = "2022-05-13";
         // $trains = Train::whereDate("departure_date", ">=" , $date)
         // ->get();
-        $trains = Train::all();
+        $trains = Train::paginate(15);
 
         return view('trains.index', ["trains" => $trains]);
     }

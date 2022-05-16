@@ -1,4 +1,6 @@
 //
+@import "~bootstrap/scss/bootstrap";
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +15,7 @@ header{
     align-items: center;
     text-transform: uppercase;
     font-weight: bold;
+    background-color: floralwhite;
 
     a{
         text-decoration: none;
@@ -20,7 +23,7 @@ header{
     }
 }
 
-main{
+div.main{
     display: flex;
     flex-wrap: wrap;
 
@@ -34,9 +37,27 @@ main{
             p{
                 margin:.7rem 0;
             }
-
-
     }
+    // div.trains-links{
+    //     display: flex;
+    //     justify-content: center;
+    //     nav{
+    //         ul.pagination{
+    //             display: flex;
+    //             gap: 3rem;
+    //             justify-content: center;
+    //             list-style-type: none;
+    //         }
+    //     }
+
+    // }
+}
+
+
+.single-train{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .bg-green{

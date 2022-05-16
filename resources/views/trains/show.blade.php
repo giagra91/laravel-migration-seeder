@@ -4,18 +4,26 @@
 
 @section('main-content')
     <div class="single-train">
-        <p>{{ $train->company }}</p>
-        <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
-        <p>Departure time: {{ $train->departure_time }} - Arrival time: {{ $train->arrival_time }}</p>
+        <div class="row">
+            <div class="col-6 py-3">
+                <a class="btn btn-success" href="{{route("trains.show", $train->id-1)}}">Prevoius train</a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-success" href="{{route("trains.show", $train->id+1)}}">Next train</a>
+            </div>
+        </div>
+        <h2>{{ $train->company }}</h2>
+        <h3>From {{ $train->departure_station }} to {{ $train->arrival_station }}</h3>
+        <h3>Departure time: {{ $train->departure_time }} - Arrival time: {{ $train->arrival_time }}</h3>
         <div class="check-infos">
-            <p>
+            <h3>
                 In time: 
                 <span class="{{ $train->is_in_time ? "train-check bg-green" : "train-check bg-red" }}"></span>
-            </p>
-            <p> 
+            </h3>
+            <h3> 
                 Circulating:
                 <span class="{{ $train->is_deleted ? "train-check bg-red" : "train-check bg-green" }}"></span>
-            </p>
+            </h3>
         </div>
     </div>
 @endsection
