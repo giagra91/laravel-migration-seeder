@@ -12,7 +12,7 @@
                 <a class="btn btn-success" href="{{route("trains.show", $train->id+1)}}">Next train</a>
             </div>
         </div>
-        <h2>{{ $train->company }}</h2>
+        <h2>Company: {{ $train->company }}</h2>
         <h3>From {{ $train->departure_station }} to {{ $train->arrival_station }}</h3>
         <h3>Departure time: {{ $train->departure_time }} - Arrival time: {{ $train->arrival_time }}</h3>
         <div class="check-infos">

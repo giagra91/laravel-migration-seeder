@@ -7,9 +7,9 @@
     <div class="main">
         @foreach ($trains as $train)
             <div class="train-card">
-                <h3>{{ $train->company }}</h3>
-                {{-- <a href="{{route("trains.show", $train->id)}}"> --}}
-                <a href='{{url("/post/$train->id")}}'>
+                <h3>Company: <span class="fw-bold">{{ $train->company }}</span></h3>
+                <a href="{{route("trains.show", $train->id)}}">
+                {{-- <a href='{{url("/post/$train->id")}}'> --}}
                     <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
                 </a>
                 <p>Departure time: {{ $train->departure_time }} - Arrival time: {{ $train->arrival_time }}</p>
