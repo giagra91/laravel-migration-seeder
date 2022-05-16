@@ -8,13 +8,12 @@
 
     @foreach ($trains as $train)
         <div class="train-card">
-            <h3>{{ $train->agency }}</h3>
-            <p>Train infos:</p>
-            <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
-            <p>Departure infos:</p>
-            <p>Date: {{ $train->departure_date }}</p>
-            <p>Departure adn arrival time:</p>
-            <p>Date and time: {{ $train->departure_time }} - {{ $train->arrival_time }}</p>
+            <h3>{{ $train->company }}</h3>
+            {{-- <a href="{{route("trains.show", $train->id)}}"> --}}
+            <a href='{{url("/post/$train->id")}}'>
+                <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
+            </a>
+            <p>Departure time: {{ $train->departure_time }} - Arrival time: {{ $train->arrival_time }}</p>
             <div class="check-infos">
                 <p>
                     In time: 

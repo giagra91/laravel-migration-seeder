@@ -9,19 +9,18 @@ class TrainController extends Controller
 {
     public function index(){
         $date = "2022-05-13";
-        $trains = Train::whereDate("departure_date", ">=" , $date)
-        ->get();
+        // $trains = Train::whereDate("departure_date", ">=" , $date)
+        // ->get();
+        $trains = Train::all();
 
         return view('trains.index', ["trains" => $trains]);
     }
 
 
     public function show($id){
-        // $date = "2022-05-13";
-        // $trains = Train::whereDate("departure_date", ">=" , $date)
-        // ->get();
-
-        return view('trains.show');
+        $train = Train::findOrFail($id);
+        
+        return view('trains.show', ["train" => $train]);
     }
 
     public function createNewTrain($agency, $departure_station, $arrival_station, $departrure_date, $departure_time, $arrival_date,

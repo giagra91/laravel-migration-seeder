@@ -1,5 +1,7 @@
 <header>
-    <h2>
-        Header inserito tramite partials
-    </h2>
+    <a href="{{route("trains.index")}}">
+        <h2>
+            Full train list
+        </h2>
+    </a>
 </header>

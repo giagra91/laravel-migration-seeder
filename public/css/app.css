@@ -4,8 +4,21 @@
   padding: 0;
 }
 
+header {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header a {
+  text-decoration: none;
+}
+
 main {
   display: flex;
+  flex-wrap: wrap;
 }
 main div.train-card {
   width: 33%;
@@ -17,18 +30,6 @@ main div.train-card {
 main div.train-card p {
   margin: 0.7rem 0;
 }
-main div.train-card div.check-infos {
-  height: 4rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-main div.train-card div.check-infos span.train-check {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-}
 
 .bg-green {
   background-color: green;
@@ -36,4 +37,17 @@ main div.train-card div.check-infos span.train-check {
 
 .bg-red {
   background-color: red;
+}
+
+div.check-infos {
+  height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.check-infos span.train-check {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
 }
