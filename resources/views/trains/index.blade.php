@@ -8,6 +8,7 @@
         @foreach ($trains as $train)
             <div class="train-card">
                 <h3>Company: <span class="fw-bold">{{ $train->company }}</span></h3>
+                <h4>Date: {{ $train->departure_date }}</h4>
                 <a href="{{route("trains.show", $train->id)}}">
                 {{-- <a href='{{url("/post/$train->id")}}'> --}}
                     <p>From {{ $train->departure_station }} to {{ $train->arrival_station }}</p>
